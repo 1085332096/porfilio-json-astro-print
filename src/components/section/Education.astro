@@ -1,6 +1,47 @@
 ---
-import Section from "@/components/Section.astro"
+// Importamos el componente Section y los datos de educación
+import Section from "@/components/Section.astro";
+import { education } from "@/cv.json";
 ---
 
-<Section title="Educacion"/>
 
+<Section title="Educación" class="education-section">
+  <ul>
+    {education.map(({ institution, area, studyType, startDate, endDate, courses }) => { // Eliminado el 'score'
+      const years = `${startDate ? new Date(startDate).getFullYear() : "Unknown"} - ${endDate ? new Date(endDate).getFullYear() : "Present"}`;
+
+      return (
+        <li>
+          <article>
+            <header>
+              <div>
+                <h3>{institution}</h3>
+                <h4>{studyType} en {area}</h4>
+              </div>
+              <time datetime="">{years}</time>
+            </header>
+            <footer>
+              {courses?.length > 0 && (
+                <ul>
+                  {courses.map((course, index) => <li key={index}>{course}</li>)}
+                </ul>
+              )}
+            </footer>
+          </article>
+        </li>
+      );
+    })}
+  </ul>
+</Section>
+
+<style>
+  
+  ul { flex-direction: column; gap: 32px; }
+  h3 { color: #1404ef; font-weight: 600; }
+  h4 { color: #101010; font-weight: 400; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+  time { color: #2106f4; font-size: 0.85rem; }
+  footer ul { margin-top: 8px; list-style: disc; padding-left: 20px; }
+  footer li { color: #0d0d0d; }
+  footer p { text-align: justify; }
+</style>

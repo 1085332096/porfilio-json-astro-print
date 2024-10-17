@@ -4,32 +4,33 @@ import Section from "@/components/Section.astro";
 import Mail from "@/icons/Mail.astro";
 import Phone from "@/icons/Phone.astro";
 import GitHub from "@/icons/GitHub.astro";
-import X from "@/icons/X.astro";
+import Facebook from "@/icons/Facebook.astro";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import WorldMap from "@/icons/WorldMap.astro";
 
+// Obtenemos los datos del archivo JSON
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
 
+// Definimos los íconos disponibles para las redes sociales
 const SOCIAL_ICONS: Record<string, any> = {
   GitHub,
-  X,
+  Facebook,
   LinkedIn,
 };
+
+// Ícono por defecto si no se encuentra uno en SOCIAL_ICONS
+const DefaultIcon = Mail;
 ---
 
 <Section>
   <div class="container">
     <div class="info">
-      <h1>
-        {name}
-      </h1>
-      <h2>
-        {label}
-      </h2>
+      <h1>{name}</h1>
+      <h2>{label}</h2>
       <span>
         <WorldMap />
-        {city},{region}
+        {city}, {region}
       </span>
       <footer>
         <div class="print">
@@ -50,8 +51,8 @@ const SOCIAL_ICONS: Record<string, any> = {
         {
           phone && (
             <a
-              href={`mailto:${phone}`}
-              title={`Llamar por telefono de ${name} al # ${phone}`}
+              href={`tel:${phone}`}
+              title={`Llamar por teléfono a ${name} al # ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -61,12 +62,13 @@ const SOCIAL_ICONS: Record<string, any> = {
         }
         {
           profiles.map(({ network, url, username }) => {
-            const Icon = SOCIAL_ICONS[network];
+            // Usamos el ícono correspondiente o el ícono por defecto
+            const Icon = SOCIAL_ICONS[network] || DefaultIcon;
 
             return (
               <a
                 href={url}
-                title={`visitar el perfil de ${name} en ${network}`}
+                title={`Visitar el perfil de ${name} en ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,18 +91,19 @@ const SOCIAL_ICONS: Record<string, any> = {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding-right: 32px;
+    gap: 0.01rem;
+    padding-right: 2px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 0.01rem;
+    font-size: ;
   }
 
   h2 {

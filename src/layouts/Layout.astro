@@ -21,6 +21,12 @@ const { image, summary } = basics
     <link rel="preload" as="image" href={image} />
   </head>
   <body>
+    <!-- Banner añadido al inicio -->
+    <div class="banner">
+      <h1>Alejandra Puerchambud</h1>
+    </div>
+
+    <!-- Aquí va el contenido principal de la página -->
     <slot />
   </body>
 </html>
@@ -34,7 +40,7 @@ const { image, summary } = basics
       "Courier New",
       Courier,
       monospace;
-    background: #fff;
+      background: linear-gradient(135deg, hsl(234, 78%, 73%), hsl(168, 14%, 93%),hsl(176, 27%, 65%));
     letter-spacing: -0.025rem;
   }
 
@@ -60,7 +66,13 @@ const { image, summary } = basics
     box-sizing: border-box;
   }
 
-  h1,
+  h1 {
+  font-size: 3rem; /* Ajusta el tamaño de la letra */
+  font-weight: bold; /* Hace que el texto sea más grueso */
+  color: white; /* Cambia el color del texto */
+  text-align: center; /* Centra el texto */
+}
+
   h2,
   h3,
   h4 {
@@ -80,7 +92,7 @@ const { image, summary } = basics
   }
 
   p {
-    color: #666;
+    color: #020202;
     font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
@@ -108,4 +120,10 @@ const { image, summary } = basics
       break-inside: avoid;
     }
   }
+
+
+
+
+
 </style>
+

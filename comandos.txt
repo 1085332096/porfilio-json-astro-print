@@ -1,2 +1,5 @@
 para crear los archivos .astro
 touch ./src/components/{Hero,About,Experience,Skills,Projects}.astro
+npm cache clean --force
+npm install
+npm update astro
