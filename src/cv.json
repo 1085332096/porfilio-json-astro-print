@@ -117,66 +117,40 @@
  
   "projects": [
     {
-      "name": "codes",
+      "name": "Shop",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
+      "description": "App tienda de productos, que permite organizar y filtrar productos",
       "highlights": [
-        "Elige tu propia aventura",
         "En desarrollo"
       ],
-      "url": "https://odes"
+      "url": "https://github.com/1085332096/tienda"
     },
     {
-      "name": "programacion",
+      "name": "Heroes App",
       "isActive": true,
-      "description": "Retos",
+      "description": "App que permite realizar la busqueda de gifs de super héroes desde una API",
       "highlights": [
-        "millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "demos en linea"
+        "En desarrollo"
+       ],
+      "url": "https://github.com/1085332096/03-heroes-app2"
     },
     {
-      "name": "proyetosdesarrollo",
+      "name": "API CRUD",
       "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
+      "description": "Esta APP es una API CRUD que permite Crear, Leer, Actualizar y Eliminar, para gestionar productos utilizando Express.js y MongoDB.",
       "highlights": [
-        "+2000 usuarios activos",
-        "Retos para cualquier lenguaje"
-      ],
-      "url": "https://proyetosdesarrollo.dev"
+        "En desarrollo"
+     ],
+      "url": "https://github.com/1085332096/API_GRUD"
     },
     {
-      "name": "link",
+      "name": "nextjs-dashboard",
       "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
+      "description": "Define una serie de componentes de animaciones de skeleton que representan versiones de carga para distintos elementos de una aplicación.",
       "highlights": [
-        "100k visitas al mes",
-        "Desarrollado por la comunidad"
+        "En desarrollo"
       ],
-      "url": "https://codi.link",
-      "github": "https://github.com/codi"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": [
-        "100% gratuito",
-        "+500"
-      ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/pruebastecnicas"
-    },
-    {
-      "name": "ponencia",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": [
-        "+15k tickets repartidos",
-        "+50k espectadores en directo"
-      ],
-      "url": "https://paginaweb.com"
+      "url": "https://github.com/1085332096/nextjs-dashboard"
     }
   ]
 }
