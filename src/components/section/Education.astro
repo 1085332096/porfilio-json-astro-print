@@ -7,9 +7,9 @@ import { education } from "@/cv.json";
 
 <Section title="Educación" class="education-section">
   <ul>
-    {education.map(({ institution, area, studyType, startDate, endDate, courses }) => { // Eliminado el 'score'
+    {education.map(({ institution, area, studyType, startDate, endDate, courses }) => { 
       const years = `${startDate ? new Date(startDate).getFullYear() : "Unknown"} - ${endDate ? new Date(endDate).getFullYear() : "Present"}`;
-
+  
       return (
         <li>
           <article>
@@ -23,7 +23,7 @@ import { education } from "@/cv.json";
             <footer>
               {courses?.length > 0 && (
                 <ul>
-                  {courses.map((course, index) => <li key={index}>{course}</li>)}
+                  {courses.map(course => <li>{course}</li>)} <!-- Remueve 'key' -->
                 </ul>
               )}
             </footer>
