@@ -59,7 +59,7 @@ const DefaultIcon = Mail;
           )
         }
         {
-          profiles.map(({ network, url, username }) => {
+          profiles.map(({ network, url }) => {
             // Usamos el ícono correspondiente o el ícono por defecto
             const Icon = SOCIAL_ICONS[network] || DefaultIcon;
 
